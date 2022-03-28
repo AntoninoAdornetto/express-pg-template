@@ -9,6 +9,7 @@
       "@api/*": ["src/api/*"],
       "@config/*": ["src/config/*"],
       "@services/*": ["src/services/*"],
+      "@utils/*": ["src/utils/*"],
       "@loaders/*": ["src/loaders/*"],
       "@tests/*": ["tests/*"]
     },
