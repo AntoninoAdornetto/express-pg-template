@@ -16,7 +16,7 @@ export default (app: Router) => {
     if (!status) return res.status(400).send({ errorMessage: 'Need to send a status' });
 
     res.status(201).send({
-      message: `My current status is: ${status}`,
+      message: `${status}`,
     });
   });
 };
