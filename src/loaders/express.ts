@@ -6,6 +6,11 @@ import errorMiddleware from '@api/middlewares/error';
 import ErrorHandler from '@services/errorHandler';
 
 export default ({ app }: { app: express.Application }) => {
+  process.on('uncaughtException', (err) => {
+    console.log(err.name, err.message);
+    process.exit(1);
+  });
+
   app.use(express.json());
 
   if (process.env.NODE_ENV === 'development') {
