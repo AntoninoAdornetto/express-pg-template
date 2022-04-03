@@ -7,6 +7,7 @@ import ErrorHandler from '@services/errorHandler';
 
 export default ({ app }: { app: express.Application }) => {
   app.use(express.json());
+
   if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));
   }
@@ -18,4 +19,5 @@ export default ({ app }: { app: express.Application }) => {
   });
 
   app.use(errorMiddleware);
+  return app;
 };
